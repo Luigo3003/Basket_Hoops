@@ -16,6 +16,14 @@ public class PoolScript : MonoBehaviour
 
     private void Awake()
     {
+        if (PSInstance == null)
+        {
+            PSInstance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         availableObjectpoolList = new List<GameObject>();
         activepoolList = new List<GameObject>();
     }
@@ -43,14 +51,14 @@ public class PoolScript : MonoBehaviour
             GameObject requestedObject = availableObjectpoolList[0];
             availableObjectpoolList.RemoveAt(0);
             activepoolList.Add(requestedObject);
+            print(" Entra en request");
             requestedObject.SetActive(true);
             return requestedObject;
         }
 
         else
         {
-            CreateObject(1);
-            return RequestObject(); ;
+            return null; 
         }
     }
 

@@ -55,7 +55,14 @@ public class SlingshotLogic : MonoBehaviour
         startPoint.z = 15f;
         tl.enabled = true;
         BallPrefab = BallPool.RequestObject();
-        BallPrefab.transform.position = PlayerPos.position;
+        Debug.Log(BallPrefab, BallPrefab);
+        if (BallPrefab != null)
+        {
+            BallPrefab.GetComponent<Rigidbody2D>().gravityScale = 0;
+            BallPrefab.transform.position = PlayerPos.position;
+
+        }
+       
 
     }
 
@@ -64,8 +71,12 @@ public class SlingshotLogic : MonoBehaviour
         endPoint.z = 15f;
         tl.enabled = false;
         tl.EndLine();
-        calculateForce();
-        BallPrefab.GetComponent<Rigidbody2D>().gravityScale = 1;
+        if (BallPrefab != null)
+        {
+            calculateForce();
+            BallPrefab.GetComponent<Rigidbody2D>().gravityScale = 1;
+        }
+       
     }
 
     private void calculateForce()

@@ -136,5 +136,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95e4a4827630c064891cda29213d27f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BallGO: {fileID: 7792855597455599380}
-  TimeToDespawn: 3
+  TimeToDespawn: 5
