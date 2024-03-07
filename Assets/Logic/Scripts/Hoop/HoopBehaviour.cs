@@ -12,7 +12,7 @@ public class HoopBehaviour : MonoBehaviour
         
         if (collision.CompareTag("Ball"))
         {
-            print("Enter the trigger");
+            Tempgo.GetComponent<BallBehaviour>().TimeActive = 0;
             GameManager.instance.IncreaseScore();
             PoolScript.PSInstance.TurnOffObjects(Tempgo);
         }

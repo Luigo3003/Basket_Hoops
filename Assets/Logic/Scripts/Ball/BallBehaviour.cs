@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallBehaviour : MonoBehaviour
 {
-    private float TimeActive = 0;
+    public float TimeActive = 0;
     public float TimeToDespawn = 0;
 
 
