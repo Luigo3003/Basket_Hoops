@@ -1,0 +1,54 @@
+{
+    "name": "PeegleInputs",
+    "maps": [
+        {
+            "name": "MouseInput",
+            "id": "45aa61a2-bd1f-4afe-b1e7-af1e9b880119",
+            "actions": [
+                {
+                    "name": "clickDown",
+                    "type": "Button",
+                    "id": "a18f70a0-c57c-4c3f-9e0c-5090487d60f6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ClickDownPos",
+                    "type": "Value",
+                    "id": "6d5baee1-f612-4d39-8653-d711c0dae7d0",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bd070a85-d283-497f-b3c4-f39541ba0d2c",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "clickDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d3fa00d1-3693-4125-a8b3-ec54263077fa",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ClickDownPos",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
